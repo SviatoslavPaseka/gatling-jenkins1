@@ -14,7 +14,7 @@ class VideogameFullTest extends Simulation{
 
   def USERCOUNT = System.getProperty("USERCOUNT", "5").toInt
   def RAMPDURATION = System.getProperty("RAMP_DURATION", "10").toInt
-  def TESTDURATION = System.getProperty("TEST_DURATION", "30").toInt
+    def TESTDURATION = System.getProperty("TEST_DURATION", "30").toInt
 
   var idNumbers = (1 to 10000).iterator
   val rnd = new Random()
@@ -121,4 +121,8 @@ class VideogameFullTest extends Simulation{
     )
   ).protocols(httpProtocol)
     .maxDuration(TESTDURATION)
+    .assertions(
+      global.responseTime.max.lt(220),
+      global.successfulRequests.percent.gt(99)
+    )
 }
