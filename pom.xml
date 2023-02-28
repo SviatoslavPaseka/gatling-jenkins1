@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.gatling.demo</groupId>
-  <artifactId>gatling-maven-plugin-demo-scala</artifactId>
+  <artifactId>gatling-maven-demo-scala</artifactId>
   <version>3.9.1</version>
 
   <properties>
@@ -15,6 +15,7 @@
     <gatling-maven-plugin.version>4.3.0</gatling-maven-plugin.version>
     <maven-jar-plugin.version>3.2.2</maven-jar-plugin.version>
     <scala-maven-plugin.version>4.8.0</scala-maven-plugin.version>
+    <scala.version>2.13.10</scala.version>
   </properties>
 
   <dependencies>
@@ -23,6 +24,11 @@
       <artifactId>gatling-charts-highcharts</artifactId>
       <version>${gatling.version}</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>${scala.version}</version>
     </dependency>
   </dependencies>
 
@@ -41,6 +47,7 @@
           <execution>
             <goals>
               <goal>testCompile</goal>
+              <goal>compile</goal>
             </goals>
             <configuration>
               <jvmArgs>
@@ -62,9 +69,18 @@
         <artifactId>gatling-maven-plugin</artifactId>
         <version>${gatling-maven-plugin.version}</version>
         <configuration>
+          <runMultipleSimulations>true</runMultipleSimulations>
           <!-- Enterprise Cloud (https://cloud.gatling.io/) configuration reference: https://gatling.io/docs/gatling/reference/current/extensions/maven_plugin/#working-with-gatling-enterprise-cloud -->
           <!-- Enterprise Self-Hosted configuration reference: https://gatling.io/docs/gatling/reference/current/extensions/maven_plugin/#working-with-gatling-enterprise-self-hosted -->
         </configuration>
+        <executions>
+          <execution>
+            <id>test</id>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
