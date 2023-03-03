@@ -1,9 +1,9 @@
-package gatlingdemostore
+package demostoreFullTest
 
-import scala.concurrent.duration._
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
+import scala.concurrent.duration._
 import scala.util.Random
 
 class DemostoreTest extends Simulation {
@@ -229,14 +229,11 @@ class DemostoreTest extends Simulation {
   setUp(
     Scenarios.default.inject(
       rampUsers(userCount).during(rampDuration.seconds)
-    ).protocols(httpProtocol)
-      .andThen(
-        Scenarios.highPurchase
-          .inject(
-            rampUsers(5).during(10.seconds)
-          )
-      ).protocols(httpProtocol)
-  )
+    ),
+    Scenarios.highPurchase.inject(
+      rampUsers(5).during(10.seconds)
+    )
+  ).protocols(httpProtocol)
 
   //**Closed model simulation**
 //	setUp(
