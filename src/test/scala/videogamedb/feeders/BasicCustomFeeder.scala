@@ -10,6 +10,7 @@ class BasicCustomFeeder extends Simulation{
 
   var idNumbers = (1 to 10).iterator
 
+
   val customFeeder = Iterator.continually(Map("gameId" -> idNumbers.next()))
 
   def getSpecificVideoGame() = {
