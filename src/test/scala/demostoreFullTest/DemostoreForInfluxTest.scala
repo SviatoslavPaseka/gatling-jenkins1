@@ -33,7 +33,7 @@ class DemostoreForInfluxTest extends Simulation{
         .check(responseTimeInMillis.saveAs("responseTime")))
 
       .exec(metricWriter.writeResponseTime(influxdb,"homePage","Load home page"))
-      .exec(metricWriter.writeThroughput(influxdb, "homePage","Load home page", 2))
+      .exec(metricWriter.writeThroughput(influxdb, "homePage","Load home page", 0))
   }
 
   def aboutPage = {
