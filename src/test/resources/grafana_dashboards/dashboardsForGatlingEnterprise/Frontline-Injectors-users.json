@@ -1,0 +1,909 @@
+{
+  "id": null,
+  "title": "Gatling Enterprise Injectors & Users",
+  "originalTitle": "Gatling Enterprise Injectors & Users",
+  "tags": [
+    "requests"
+  ],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": false,
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "content": "",
+          "editable": true,
+          "error": false,
+          "height": "25px",
+          "id": 11,
+          "isNew": true,
+          "links": [],
+          "mode": "markdown",
+          "span": 12,
+          "title": "Users",
+          "type": "text"
+        },
+        {
+          "aliasColors": {
+            "SimpleVisit": "#5195CE"
+          },
+          "bars": false,
+          "datasource": "Gatling Enterprise",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 12,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "group": "$group",
+              "metric": "usr+",
+              "refId": "A",
+              "request": "$requests",
+              "scenario": "$scenario",
+              "simulation": "$simulation",
+              "run": "$run"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Users Arrival Rate",
+          "tooltip": {
+            "msResolution": true,
+            "ordering": "alphabetical",
+            "shared": true,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": "Counts/s",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "SimpleVisit": "#5195CE"
+          },
+          "bars": false,
+          "datasource": "Gatling Enterprise",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 13,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "group": "$group",
+              "metric": "usrActive",
+              "refId": "A",
+              "request": "$requests",
+              "scenario": "$scenario",
+              "simulation": "$simulation",
+              "run": "$run"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Concurrent Users",
+          "tooltip": {
+            "msResolution": true,
+            "ordering": "alphabetical",
+            "shared": true,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": "Counts",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "SimpleVisit": "#65C5DB"
+          },
+          "bars": false,
+          "datasource": "Gatling Enterprise",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 14,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "group": "$group",
+              "metric": "usr-",
+              "refId": "A",
+              "request": "$requests",
+              "scenario": "$scenario",
+              "simulation": "$simulation",
+              "run": "$run"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Users Termination Rate",
+          "tooltip": {
+            "msResolution": true,
+            "ordering": "alphabetical",
+            "shared": true,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": "Counts/s",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "content": "",
+          "editable": true,
+          "error": false,
+          "height": "25px",
+          "id": 15,
+          "isNew": true,
+          "links": [],
+          "mode": "markdown",
+          "span": 12,
+          "title": "Nodes",
+          "type": "text"
+        },
+        {
+          "aliasColors": {
+            "ParNew": "#614D93"
+          },
+          "bars": false,
+          "datasource": "Gatling Enterprise",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 16,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "metric": "gcCount",
+              "node": "$node",
+              "refId": "A",
+              "simulation": "$simulation",
+              "run": "$run",
+              "injector": "$injector"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "GC Counts per Second",
+          "tooltip": {
+            "msResolution": true,
+            "ordering": "alphabetical",
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": "Counts/s",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "ParNew": "#806EB7"
+          },
+          "bars": false,
+          "datasource": "Gatling Enterprise",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 17,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "metric": "gcTime",
+              "node": "$node",
+              "refId": "A",
+              "simulation": "$simulation",
+              "run": "$run",
+              "injector": "$injector"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "GC Time per Second",
+          "tooltip": {
+            "msResolution": true,
+            "ordering": "alphabetical",
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": "Time/s (ms)",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "heapCommitted": "#890F02",
+            "heapMax": "#EAB839",
+            "heapUsed": "#0A50A1"
+          },
+          "bars": false,
+          "datasource": "Gatling Enterprise",
+          "editable": true,
+          "error": false,
+          "fill": 0,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 20,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "metric": "heapUsed",
+              "node": "$node",
+              "refId": "B",
+              "simulation": "$simulation",
+              "run": "$run",
+              "injector": "$injector"
+            },
+            {
+              "metric": "heapMax",
+              "node": "$node",
+              "refId": "A",
+              "simulation": "$simulation",
+              "run": "$run",
+              "injector": "$injector"
+            },
+            {
+              "metric": "heapCommitted",
+              "node": "$node",
+              "refId": "C",
+              "simulation": "$simulation",
+              "run": "$run",
+              "injector": "$injector"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Heap usage in Mb",
+          "tooltip": {
+            "msResolution": true,
+            "ordering": "alphabetical",
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": "usage(Mb)",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "sent": "#E0752D"
+          },
+          "bars": false,
+          "datasource": "Gatling Enterprise",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 19,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "metric": "tcpSeg",
+              "node": "$node",
+              "refId": "A",
+              "simulation": "$simulation",
+              "run": "$run",
+              "injector": "$injector"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "TCP Segment Event per Second",
+          "tooltip": {
+            "msResolution": true,
+            "ordering": "alphabetical",
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": "Counts/s",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "active openings": "#1F78C1",
+            "established": "#3F6833"
+          },
+          "bars": false,
+          "datasource": "Gatling Enterprise",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 18,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "metric": "tcpConn",
+              "node": "$node",
+              "refId": "A",
+              "simulation": "$simulation",
+              "run": "$run",
+              "injector": "$injector"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "TCP Connection Events per Second",
+          "tooltip": {
+            "msResolution": true,
+            "ordering": "alphabetical",
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": "Counts/s",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "cpuSys": "#890F02",
+            "cpuUser": "#629E51"
+          },
+          "bars": false,
+          "datasource": "Gatling Enterprise",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 21,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "metric": "cpuSys",
+              "node": "$node",
+              "refId": "A",
+              "simulation": "$simulation",
+              "run": "$run",
+              "injector": "$injector"
+            },
+            {
+              "metric": "cpuUser",
+              "node": "$node",
+              "refId": "B",
+              "simulation": "$simulation",
+              "run": "$run",
+              "injector": "$injector"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "CPU usage in percents",
+          "tooltip": {
+            "msResolution": true,
+            "ordering": "alphabetical",
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": "Percent",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "title": "New row"
+    }
+  ],
+  "time": {
+    "from": "now-30d",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "templating": {
+    "list": [
+      {
+        "datasource": "Gatling Enterprise",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "simulation",
+        "query": "{\"type\":\"simulations\"}",
+        "refresh": 2,
+        "type": "query"
+      },
+      {
+        "datasource": "Gatling Enterprise",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "run",
+        "query": "{\"type\":\"runs\", \"simulation\":\"$simulation\"}",
+        "refresh": 2,
+        "type": "query"
+      },
+      {
+        "datasource": "Gatling Enterprise",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "injector",
+        "query": "{\"type\":\"injectors\", \"run\":\"$run\" }",
+        "refresh": 2,
+        "type": "query"
+      },
+      {
+        "datasource": "Gatling Enterprise",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "scope",
+        "query": "all,ok,ko",
+        "refresh": 0,
+        "type": "custom",
+        "options": [
+          {
+            "text": "all",
+            "value": "all",
+            "selected": true
+          },
+          {
+            "text": "ok",
+            "value": "ok",
+            "selected": false
+          },
+          {
+            "text": "ko",
+            "value": "ko",
+            "selected": false
+          }
+        ],
+        "current": {
+          "text": "all",
+          "value": "all"
+        }
+      }
+    ]
+  },
+  "annotations": {
+    "list": []
+  },
+  "refresh": false,
+  "schemaVersion": 12,
+  "version": 45,
+  "links": []
+}

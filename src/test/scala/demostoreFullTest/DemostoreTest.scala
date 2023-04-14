@@ -69,14 +69,13 @@ class DemostoreTest extends Simulation {
           .check(css("#_csrf", "content").saveAs("csrfValue"))
           .check(regex("<title>Gatling Demo-Store</title>"))
           .check(responseTimeInMillis.saveAs("responseTime")))
-          .exec(session => {
-            val testName = "homePage"
-            val requestName = "Load home page"
-            val responseTime = session("responseTime").as[Int]
-            writeToInfluxDB(testName, requestName, responseTime)
-            session
-          }
-      )
+//          .exec(session => {
+//            val testName = "homePage"
+//            val requestName = "Load home page"
+//            val responseTime = session("responseTime").as[Int]
+//            writeToInfluxDB(testName, requestName, responseTime)
+//            session
+//          }
     }
 
     def aboutPage ={
@@ -86,13 +85,13 @@ class DemostoreTest extends Simulation {
           .check(status is 200)
           .check(substring("About Us"))
           .check(responseTimeInMillis.saveAs("responseTime")))
-          .exec(session => {
-            val testName = "aboutPage"
-            val requestName = "Load about us page"
-            val responseTime = session("responseTime").as[Int]
-            writeToInfluxDB(testName, requestName, responseTime)
-            session
-          })
+//          .exec(session => {
+//            val testName = "aboutPage"
+//            val requestName = "Load about us page"
+//            val responseTime = session("responseTime").as[Int]
+//            writeToInfluxDB(testName, requestName, responseTime)
+//            session
+//          })
     }
   }
 
@@ -106,13 +105,13 @@ class DemostoreTest extends Simulation {
               .check(status is 200)
               .check(css("#CategoryName").is("${categoryName}"))
               .check(responseTimeInMillis.saveAs("responseTime")))
-          .exec(session => {
-            val testName = "Catalog.Category.view"
-            val requestName = "Load Categories Page - ${categoryName}"
-            val responseTime = session("responseTime").as[Int]
-            writeToInfluxDB(testName, requestName, responseTime)
-            session
-          })
+//          .exec(session => {
+//            val testName = "Catalog.Category.view"
+//            val requestName = "Load Categories Page - ${categoryName}"
+//            val responseTime = session("responseTime").as[Int]
+//            writeToInfluxDB(testName, requestName, responseTime)
+//            session
+//          })
       }
     }
     object Product {
@@ -124,13 +123,13 @@ class DemostoreTest extends Simulation {
               .check(status is 200)
               .check(css("#ProductDescription").is ("${description}"))
               .check(responseTimeInMillis.saveAs("responseTime")))
-          .exec(session => {
-            val testName = "Catalog.Product.view"
-            val requestName = "Load product page - ${name}"
-            val responseTime = session("responseTime").as[Int]
-            writeToInfluxDB(testName, requestName, responseTime)
-            session
-          })
+//          .exec(session => {
+//            val testName = "Catalog.Product.view"
+//            val requestName = "Load product page - ${name}"
+//            val responseTime = session("responseTime").as[Int]
+//            writeToInfluxDB(testName, requestName, responseTime)
+//            session
+//          })
       }
       def add = {
         var total = 0.0
